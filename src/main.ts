@@ -1,6 +1,16 @@
-import { bootstrapApplication } from '@angular/platform-browser';
+// Starter program if components are standalone => NgModules not used
 
-import { AppComponent } from './app/app.component';
+// import { bootstrapApplication } from '@angular/platform-browser';
+
+// import { AppComponent } from './app/app.component';
 
 
-bootstrapApplication(AppComponent).catch((err) => console.error(err));
+// bootstrapApplication(AppComponent).catch((err) => console.error(err));
+
+
+// starter program if components are not standalone => NgModules used
+
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { AppModule } from './app/app.module';
+
+platformBrowserDynamic().bootstrapModule(AppModule);
